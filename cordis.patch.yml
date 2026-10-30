@@ -1,0 +1,7 @@
+# dsh-qq-persona bundle patch
+# 可视化人物性格切换。预设库与当前选择放在 <DSH_HOME>/qq-persona/ 下。
+- insert:
+    - id: qq-persona
+      name: dsh-qq-persona
+      config:
+        enabled: true
