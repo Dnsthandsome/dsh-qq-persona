@@ -1,0 +1,30 @@
+{
+  "name": "dsh-qq-persona",
+  "version": "0.2.0",
+  "description": "可视化「人物性格」配置插件：每个性格独立记忆/会话/声音，一键切换即热生效。",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "keywords": ["dsh", "qq", "moony", "persona", "character", "preset", "napcat"],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": ["index.js", "client.js", "cordis.patch.yml"],
+  "engines": {
+    "dsh": ">=0.1.7",
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-runtime"]
+    }
+  }
+}
